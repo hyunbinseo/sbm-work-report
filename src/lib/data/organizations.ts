@@ -7,6 +7,8 @@ export type District = Readonly<{
   department: readonly string[];
 }>;
 
+export type Category = keyof District;
+
 export const gangnam: District = {
   center: [
     '개포1동',
