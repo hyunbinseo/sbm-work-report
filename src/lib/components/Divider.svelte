@@ -6,7 +6,7 @@
 		<span class="relative z-0 inline-flex -space-x-px rounded-md shadow-sm">
 			<button
 				type="button"
-				class="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-400 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+				class="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-4 py-2 font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
 			>
 				<span class="sr-only">삭제</span>
 				<!-- Heroicon name: solid/minus-sm -->
@@ -25,7 +25,7 @@
 			</button>
 			<button
 				type="button"
-				class="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-400 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+				class="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-4 py-2 font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
 			>
 				<span class="sr-only">추가</span>
 				<!-- Heroicon name: solid/plus-sm -->

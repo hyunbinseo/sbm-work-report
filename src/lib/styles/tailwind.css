@@ -8,9 +8,7 @@
 	}
 	th,
 	td {
-		@apply px-5;
-		@apply py-3;
-		@apply text-sm;
+		@apply p-3;
 		@apply text-gray-700;
 	}
 	th {

@@ -11,13 +11,13 @@
 </script>
 
 <div>
-	<label class="block text-sm font-medium text-gray-700">
+	<label class="block font-medium text-gray-700">
 		{label}
 		<select
 			{name}
 			bind:value
 			bind:this={select}
-			class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+			class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
 		>
 			{#each options as [text, value]}
 				<option value={value || text}>{text}</option>
