@@ -6,4 +6,17 @@
 	a {
 		@apply text-indigo-500;
 	}
+	th,
+	td {
+		@apply px-5;
+		@apply py-3;
+		@apply text-sm;
+		@apply text-gray-700;
+	}
+	th {
+		@apply font-medium;
+	}
+	td {
+		@apply text-center;
+	}
 }
