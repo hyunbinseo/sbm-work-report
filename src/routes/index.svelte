@@ -9,12 +9,13 @@
 
 	import type { Category } from '$lib/data/organizations';
 
-	let category: Category;
-
-	const getOrganizations = (): [text: string][] =>
+	// Inferred return type `string[][]` is not compatible with the `options` prop
+	const getOrganizations = (category: Category): [text: string][] =>
 		gangnam[category || 'department'].map((value) => [value]);
 
-	$: organizations = getOrganizations();
+	let category: Category;
+
+	$: organizations = getOrganizations(category);
 </script>
 
 <div class="bg-gray-50">
