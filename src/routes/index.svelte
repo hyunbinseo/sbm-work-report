@@ -2,7 +2,6 @@
 	import Select from '$lib/components/elements/Select.svelte';
 
 	import Agent from '$lib/components/Agent.svelte';
-	import Divider from '$lib/components/Divider.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Report from '$lib/components/Report.svelte';
 
@@ -20,9 +19,9 @@
 
 <div class="bg-gray-50">
 	<main class="mx-auto max-w-screen-2xl px-4 py-10 sm:py-16 sm:px-6 lg:px-12 xl:px-16">
-		<form class="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
+		<div class="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
 			<!-- Column -->
-			<div>
+			<form>
 				<!-- Organization -->
 				<div>
 					<h2 class="text-lg font-medium text-gray-900">기관 정보</h2>
@@ -43,17 +42,16 @@
 					</div>
 				</div>
 				<!-- Agent -->
-				<div class="mt-10 border-t border-gray-200 pt-10">
+				<div class="mt-10 border-t border-gray-200 pt-10 sm:sticky sm:top-0">
 					<h2 class="text-lg font-medium text-gray-900">보수 정보</h2>
 					<Agent />
-					<Divider />
 				</div>
-			</div>
+			</form>
 			<!-- Column -->
 			<div class="mt-10 lg:mt-0">
-				<h2 class="text-lg font-medium text-gray-900">보고서</h2>
+				<h2 class="text-lg font-medium text-gray-900">입력 정보</h2>
 				<div
-					class="mt-4 space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white py-6 px-4 shadow-sm sm:sticky sm:top-6 sm:px-6 lg:top-8"
+					class="mt-4 space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white py-6 px-4 shadow-sm sm:px-6"
 				>
 					<Report />
 					<div class="border-t border-gray-200">
@@ -66,7 +64,7 @@
 					</div>
 				</div>
 			</div>
-		</form>
+		</div>
 	</main>
 	<Footer />
 </div>

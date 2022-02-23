@@ -15,6 +15,6 @@
 		@apply font-medium;
 	}
 	td {
-		@apply text-center;
+		@apply text-right;
 	}
 }
