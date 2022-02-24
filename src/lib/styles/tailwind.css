@@ -10,6 +10,7 @@
 	td {
 		@apply p-3;
 		@apply text-gray-700;
+		@apply border;
 	}
 	th {
 		@apply font-medium;

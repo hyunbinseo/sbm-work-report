@@ -55,14 +55,12 @@
 					class="mt-4 space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white py-6 px-4 shadow-sm sm:px-6"
 				>
 					<Report />
-					<div class="border-t border-gray-200">
-						<button
-							type="submit"
-							class="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
-						>
-							저장
-						</button>
-					</div>
+					<button
+						type="button"
+						class="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+					>
+						인쇄하기
+					</button>
 				</div>
 			</div>
 		</div>
