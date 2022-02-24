@@ -20,7 +20,7 @@
 
 <div class="bg-gray-50">
 	<main class="mx-auto max-w-screen-2xl px-4 py-10 sm:py-16 sm:px-6 lg:px-12 xl:px-16">
-		<div class="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
+		<div class="xl:grid xl:grid-cols-2 xl:gap-x-16">
 			<!-- Column -->
 			<form>
 				<!-- Organization -->
