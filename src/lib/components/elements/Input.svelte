@@ -9,8 +9,8 @@
 	export let placeholder: string = '';
 	export let value: string | number = null;
 
-	// Currently used to input number of days only
-	const attributes = type === 'number' ? { min: 0 } : {};
+	// Currently used to input number of days in a month only
+	const attributes = type === 'number' ? { min: 0, max: 31 } : {};
 </script>
 
 <div>
