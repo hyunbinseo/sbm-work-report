@@ -1,32 +1,50 @@
 <script lang="ts">
 	import Input from '$lib/components/elements/Input.svelte';
 	import Divider from '$lib/components/Divider.svelte';
+	import { isFormElement, createAgentData } from '$lib/utilities/form';
+	import { agentStore } from '$lib/store';
 </script>
 
 <form
-	on:submit|preventDefault={() => {}}
+	on:submit|preventDefault={({ target }) => {
+		if (!isFormElement(target)) return;
+		const formData = new FormData(target);
+		agentStore.add(createAgentData(formData));
+		target.reset();
+		target.querySelector('input').focus();
+	}}
 	class="mt-6 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm"
 >
 	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-3 sm:p-6">
 		<Input label="이름" name="name" placeholder="홍길동" type="text" />
-		<Input label="출장 횟수" name="business-trip" type="number" placeholder="출장부 참고" />
-		<Input label="교육 일수" name="education" type="number" placeholder="복무기본교육" />
+		<Input label="출장 횟수" name="business-trip" type="number" placeholder="교통비 지급 대상" />
+		<Input label="교육 일수" name="education" type="number" placeholder="복무기본교육 등" />
 	</div>
 
 	<Divider name="휴가" />
 	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-3 sm:p-6">
 		<Input label="연가 일수" name="annual-leave" type="number" />
+		<Input label="병가 일수" name="sick-leave" type="number" />
 		<Input label="공가 일수" name="official-leave" type="number" />
-		<Input label="병가 일수" name="sick-leave" type="number" placeholder="30일 이하" />
 		<Input label="청원 휴가 일수" name="emergency-leave" type="number" />
 		<Input label="특별 휴가 일수" name="special-leave" type="number" />
 	</div>
 
 	<Divider name="보수 공제 대상" />
 	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-3 sm:p-6">
-		<Input label="이탈 일수" name="deduct-leave" type="number" value={0} />
-		<Input label="결근 일수" name="deduct-absence" type="number" value={0} />
-		<Input label="병가 일수" name="deduct-sick-leave" type="number" placeholder="30일 초과" />
+		<Input
+			label="초과 결근 일수"
+			name="unpaid-exceed-leave"
+			type="number"
+			placeholder="연가 일수 기준"
+		/>
+		<Input
+			label="초과 병가 일수"
+			name="unpaid-sick-leave"
+			type="number"
+			placeholder="통산 30일 기준"
+		/>
+		<Input label="복무 이탈 일수" name="unpaid-absence" type="number" />
 	</div>
 
 	<nav
