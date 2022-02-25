@@ -8,6 +8,9 @@
 </head>
 
 <body>
+  <script>
+    if (/MSIE|Trident/.test(window.navigator.userAgent)) location.href = '%svelte.assets%/unsupported.html';
+  </script>
   <div>%svelte.body%</div>
 </body>
 
