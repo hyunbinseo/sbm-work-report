@@ -1,9 +1,11 @@
 <script lang="ts">
 	import Select from '$lib/components/elements/Select.svelte';
 
+	import Approval from '$lib/components/report/Approval.svelte';
+	import Data from '$lib/components/report/Data.svelte';
+
 	import Agent from '$lib/components/Agent.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import Report from '$lib/components/Report.svelte';
 
 	import { gangnam } from '$lib/data/organizations';
 
@@ -19,8 +21,9 @@
 </script>
 
 <!-- @media print -->
-<div class="screen:hidden">
-	<Report print={true} />
+<div class="space-y-6 screen:hidden">
+	<Approval />
+	<Data print={true} />
 </div>
 
 <!-- @media screen -->
@@ -62,7 +65,7 @@
 					<div
 						class="mt-4 space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white py-6 px-4 shadow-sm sm:px-6"
 					>
-						<Report />
+						<Data />
 						<button
 							on:click={() => window.print()}
 							type="button"
