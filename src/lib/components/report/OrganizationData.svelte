@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 
-	import { organizationStore } from '$lib/store';
+	import { organizationStore } from '$lib/stores/organization';
 </script>
 
 {#if $organizationStore}

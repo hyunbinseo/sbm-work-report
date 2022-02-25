@@ -3,8 +3,7 @@
 
 	import Select from '$lib/components/elements/Select.svelte';
 	import { gangnam } from '$lib/data/organizations';
-	import { createOrganizationData } from '$lib/utilities/form';
-	import { organizationStore } from '$lib/store';
+	import { organizationStore, createOrganizationData } from '$lib/stores/organization';
 
 	import type { Category } from '$lib/data/organizations';
 

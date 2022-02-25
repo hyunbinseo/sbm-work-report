@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Input from '$lib/components/elements/Input.svelte';
 	import Divider from '$lib/components/Divider.svelte';
-	import { isFormElement, createAgentData } from '$lib/utilities/form';
-	import { agentStore } from '$lib/store';
+	import { isFormElement } from '$lib/utilities/form';
+	import { agentStore, createAgentData } from '$lib/stores/agent';
 </script>
 
 <form

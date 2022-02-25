@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { agentStore } from '$lib/store';
+	import { agentStore } from '$lib/stores/agent';
 
 	export let print = false;
 </script>
