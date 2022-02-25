@@ -18,8 +18,8 @@
 		<Input label="연가 일수" name="annual-leave" type="number" />
 		<Input label="공가 일수" name="official-leave" type="number" />
 		<Input label="병가 일수" name="sick-leave" type="number" placeholder="30일 이하" />
-		<Input label="청원 휴가 일수" name="emergency-leave" type="number" value={0} />
-		<Input label="특별 휴가 일수" name="special-leave" type="number" value={0} />
+		<Input label="청원 휴가 일수" name="emergency-leave" type="number" />
+		<Input label="특별 휴가 일수" name="special-leave" type="number" />
 	</div>
 
 	<Divider name="보수 공제 대상" />
