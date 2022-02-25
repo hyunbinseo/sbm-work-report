@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { agentStore } from '$lib/store';
+
+	export let print = false;
 </script>
 
 <div class="overflow-x-auto">
@@ -10,14 +12,18 @@
 		<col />
 		<colgroup span="2" />
 		<colgroup span="3" />
-		<col />
+		{#if !print}
+			<col />
+		{/if}
 		<tr class="bg-gray-100">
 			<th scope="col" rowspan="2">번호</th>
 			<th scope="col" rowspan="2">요원</th>
 			<th scope="col" rowspan="2">출장<br />횟수</th>
 			<th scope="colgroup" colspan="2">보수 지급</th>
 			<th scope="colgroup" colspan="3">보수 미지급</th>
-			<th scope="col" rowspan="2">비고</th>
+			{#if !print}
+				<th scope="col" rowspan="2">비고</th>
+			{/if}
 		</tr>
 		<tr class="bg-gray-100">
 			<th scope="col">휴가</th>
@@ -36,15 +42,17 @@
 				<td>{agent.unpaid.exceedLeave}일</td>
 				<td>{agent.unpaid.sickLeave}일</td>
 				<td>{agent.unpaid.absence}일</td>
-				<td class="text-center">
-					<button
-						on:click={() => {
-							agentStore.remove(agent.id);
-						}}
-						type="button"
-						class="text-red-500">삭제</button
-					>
-				</td>
+				{#if !print}
+					<td class="text-center">
+						<button
+							on:click={() => {
+								agentStore.remove(agent.id);
+							}}
+							type="button"
+							class="text-red-500">삭제</button
+						>
+					</td>
+				{/if}
 			</tr>
 		{/each}
 	</table>

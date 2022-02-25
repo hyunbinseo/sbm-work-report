@@ -18,7 +18,13 @@
 	$: organizations = getOrganizations(category);
 </script>
 
-<div class="bg-gray-50">
+<!-- @media print -->
+<div class="screen:hidden">
+	<Report print={true} />
+</div>
+
+<!-- @media screen -->
+<div class="bg-gray-50 print:hidden">
 	<main class="mx-auto max-w-screen-2xl px-4 py-10 sm:py-16 sm:px-6 lg:px-12 xl:px-16">
 		<div class="xl:grid xl:grid-cols-2 xl:gap-x-16">
 			<!-- Column -->
@@ -56,6 +62,7 @@
 				>
 					<Report />
 					<button
+						on:click={() => window.print()}
 						type="button"
 						class="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
 					>
