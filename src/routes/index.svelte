@@ -56,18 +56,21 @@
 			</form>
 			<!-- Column -->
 			<div class="mt-10 lg:mt-0">
-				<h2 class="text-lg font-medium text-gray-900">입력 정보</h2>
-				<div
-					class="mt-4 space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white py-6 px-4 shadow-sm sm:px-6"
-				>
-					<Report />
-					<button
-						on:click={() => window.print()}
-						type="button"
-						class="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+				<!-- Data -->
+				<div class="mt-10 border-t border-gray-200 pt-10 xl:mt-0 xl:border-none xl:pt-0">
+					<h2 class="text-lg font-medium text-gray-900">입력 정보</h2>
+					<div
+						class="mt-4 space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white py-6 px-4 shadow-sm sm:px-6"
 					>
-						인쇄하기
-					</button>
+						<Report />
+						<button
+							on:click={() => window.print()}
+							type="button"
+							class="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+						>
+							인쇄하기
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
