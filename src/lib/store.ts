@@ -1,5 +1,14 @@
 import { writable } from 'svelte/store';
 
+export type OrganizationData = {
+  city: string;
+  district: string;
+  organization: string;
+  type: string;
+};
+
+export const organizationStore = writable<OrganizationData>();
+
 export type AgentData = {
   id: number;
   name: string;

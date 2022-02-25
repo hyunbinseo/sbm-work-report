@@ -1,6 +1,13 @@
-import type { AgentData } from '$lib/store';
+import type { AgentData, OrganizationData } from '$lib/store';
 
 export const isFormElement = (target: unknown): target is HTMLFormElement => (target instanceof HTMLFormElement);
+
+export const createOrganizationData = (formData: FormData): OrganizationData => ({
+  city: formData.get('city').toString(),
+  district: formData.get('district').toString(),
+  organization: formData.get('organization').toString(),
+  type: formData.get('type').toString(),
+});
 
 export const createAgentData = (formData: FormData): AgentData => ({
   id: Date.now(),

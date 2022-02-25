@@ -1,23 +1,9 @@
 <script lang="ts">
-	import Select from '$lib/components/elements/Select.svelte';
-
 	import Approval from '$lib/components/report/Approval.svelte';
 	import Data from '$lib/components/report/Data.svelte';
-
 	import Agent from '$lib/components/Agent.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-
-	import { gangnam } from '$lib/data/organizations';
-
-	import type { Category } from '$lib/data/organizations';
-
-	// Inferred return type `string[][]` is not compatible with the `options` prop
-	const getOrganizations = (category: Category): [text: string][] =>
-		gangnam[category || 'department'].map((value) => [value]);
-
-	let category: Category;
-
-	$: organizations = getOrganizations(category);
+	import Organization from '$lib/components/Organization.svelte';
 </script>
 
 <!-- @media print -->
@@ -31,32 +17,18 @@
 	<main class="mx-auto max-w-screen-2xl px-4 py-10 sm:py-16 sm:px-6 lg:px-12 xl:px-16">
 		<div class="xl:grid xl:grid-cols-2 xl:gap-x-16">
 			<!-- Column -->
-			<form>
+			<div>
 				<!-- Organization -->
 				<div>
 					<h2 class="text-lg font-medium text-gray-900">기관 정보</h2>
-					<div class="mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4">
-						<Select name="city" label="도시" options={[['서울특별시']]} />
-						<Select name="district" label="구" options={[['강남구']]} />
-						<Select
-							bind:value={category}
-							name="category"
-							label="분류"
-							options={[
-								['구청/보건소', 'department'],
-								['동주민센터', 'center']
-							]}
-						/>
-						<Select name="organization" label="소속" options={organizations} />
-						<Select name="type" label="구분" options={[['지방자치단체'], ['사회복지시설']]} />
-					</div>
+					<Organization />
 				</div>
 				<!-- Agent -->
 				<div class="mt-10 border-t border-gray-200 pt-10 sm:sticky sm:top-0">
 					<h2 class="text-lg font-medium text-gray-900">보수 정보</h2>
 					<Agent />
 				</div>
-			</form>
+			</div>
 			<!-- Column -->
 			<div class="mt-10 lg:mt-0">
 				<!-- Data -->
