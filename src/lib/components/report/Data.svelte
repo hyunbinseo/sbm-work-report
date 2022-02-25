@@ -32,28 +32,34 @@
 			<th scope="col">병가</th>
 			<th scope="col">이탈</th>
 		</tr>
-		{#each $agentStore as agent, index (agent.id)}
-			<tr class:bg-gray-50={index % 2 === 1}>
-				<th scope="row">{index + 1}</th>
-				<th scope="row">{agent.name}</th>
-				<td>{agent.businessTrip}회</td>
-				<td>{Object.values(agent.paid).reduce((a, b) => a + b)}일 </td>
-				<td>{agent.education}일</td>
-				<td>{agent.unpaid.exceedLeave}일</td>
-				<td>{agent.unpaid.sickLeave}일</td>
-				<td>{agent.unpaid.absence}일</td>
-				{#if !print}
-					<td class="text-center">
-						<button
-							on:click={() => {
-								agentStore.remove(agent.id);
-							}}
-							type="button"
-							class="text-red-500">삭제</button
-						>
-					</td>
-				{/if}
+		{#if !$agentStore.length}
+			<tr>
+				<td colspan="9" class="text-center">입력된 보수 정보가 없습니다.</td>
 			</tr>
-		{/each}
+		{:else}
+			{#each $agentStore as agent, index (agent.id)}
+				<tr class:bg-gray-50={index % 2 === 1}>
+					<th scope="row">{index + 1}</th>
+					<th scope="row">{agent.name}</th>
+					<td>{agent.businessTrip}회</td>
+					<td>{Object.values(agent.paid).reduce((a, b) => a + b)}일 </td>
+					<td>{agent.education}일</td>
+					<td>{agent.unpaid.exceedLeave}일</td>
+					<td>{agent.unpaid.sickLeave}일</td>
+					<td>{agent.unpaid.absence}일</td>
+					{#if !print}
+						<td class="text-center">
+							<button
+								on:click={() => {
+									agentStore.remove(agent.id);
+								}}
+								type="button"
+								class="text-red-500">삭제</button
+							>
+						</td>
+					{/if}
+				</tr>
+			{/each}
+		{/if}
 	</table>
 </div>
