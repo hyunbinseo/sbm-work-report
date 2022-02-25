@@ -1,6 +1,7 @@
 <script lang="ts">
+	import AgentData from '$lib/components/report/AgentData.svelte';
 	import Approval from '$lib/components/report/Approval.svelte';
-	import Data from '$lib/components/report/Data.svelte';
+	import OrganizationData from '$lib/components/report/OrganizationData.svelte';
 	import Agent from '$lib/components/Agent.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Organization from '$lib/components/Organization.svelte';
@@ -9,7 +10,8 @@
 <!-- @media print -->
 <div class="space-y-6 screen:hidden">
 	<Approval />
-	<Data print={true} />
+	<OrganizationData />
+	<AgentData print={true} />
 </div>
 
 <!-- @media screen -->
@@ -37,7 +39,8 @@
 					<div
 						class="mt-4 space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white py-6 px-4 shadow-sm sm:px-6"
 					>
-						<Data />
+						<OrganizationData />
+						<AgentData />
 						<button
 							on:click={() => window.print()}
 							type="button"
