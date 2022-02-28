@@ -17,6 +17,17 @@
 
 	$: organizations = getOrganizations(category);
 
+	// Month
+
+	let monthInput: HTMLInputElement;
+
+	const setMonthInput = () => {
+		const date = new Date();
+		const year = date.getFullYear();
+		const month = `${date.getMonth() + 1}`.padStart(2, '0');
+		monthInput.value = `${year}-${month}`;
+	};
+
 	// Organization
 
 	let organizationForm: HTMLFormElement;
@@ -27,7 +38,10 @@
 		organizationStore.set(createOrganizationData(formData));
 	};
 
-	onMount(setOrganizationStore);
+	onMount(async () => {
+		setMonthInput();
+		await setOrganizationStore();
+	});
 </script>
 
 <form bind:this={organizationForm} on:change={setOrganizationStore}>
@@ -45,5 +59,16 @@
 		/>
 		<Select name="organization" label="소속" options={organizations} />
 		<Select name="type" label="구분" options={[['지방자치단체'], ['사회복지시설']]} />
+		<div>
+			<label class="block font-medium text-gray-700">
+				대상 연월
+				<input
+					bind:this={monthInput}
+					name="month"
+					type="month"
+					class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+				/>
+			</label>
+		</div>
 	</div>
 </form>
