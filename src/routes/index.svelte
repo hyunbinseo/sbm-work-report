@@ -15,7 +15,10 @@
 	setDocumentId();
 </script>
 
-<svelte:window on:beforeprint={setDocumentId} />
+<svelte:window
+	on:beforeprint={setDocumentId}
+	on:beforeunload|preventDefault={(e) => (e.returnValue = '')}
+/>
 
 <!-- @media print -->
 <div class="space-y-6 screen:hidden">
