@@ -1,4 +1,6 @@
 <script lang="ts">
+	const { VITE_TITLE } = import.meta.env;
+
 	import { v4 as uuidv4 } from 'uuid';
 
 	import AgentData from '$lib/components/report/AgentData.svelte';
@@ -31,6 +33,9 @@
 <!-- @media screen -->
 <div class="bg-gray-50 print:hidden">
 	<main class="mx-auto max-w-screen-2xl px-4 py-10 sm:py-16 sm:px-6 lg:px-12 xl:px-16">
+		<h1 class="pb-10 text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl">
+			{VITE_TITLE}
+		</h1>
 		<div class="xl:grid xl:grid-cols-2 xl:gap-x-16">
 			<!-- Column -->
 			<div>
