@@ -1,14 +1,25 @@
 <script lang="ts">
+	import { v4 as uuidv4 } from 'uuid';
+
 	import AgentData from '$lib/components/report/AgentData.svelte';
 	import Approval from '$lib/components/report/Approval.svelte';
 	import OrganizationData from '$lib/components/report/OrganizationData.svelte';
 	import Agent from '$lib/components/Agent.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Organization from '$lib/components/Organization.svelte';
+
+	let documentId: string;
+
+	const setDocumentId = () => (documentId = uuidv4());
+
+	setDocumentId();
 </script>
+
+<svelte:window on:beforeprint={setDocumentId} />
 
 <!-- @media print -->
 <div class="space-y-6 screen:hidden">
+	<code class="text-xs">{documentId}</code>
 	<Approval />
 	<OrganizationData />
 	<AgentData print={true} />
