@@ -6,6 +6,10 @@
 	a {
 		@apply text-indigo-500;
 	}
+	tr {
+		@apply break-inside-avoid;
+		@apply break-after-auto;
+	}
 	th,
 	td {
 		@apply p-2;
