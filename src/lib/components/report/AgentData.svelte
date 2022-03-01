@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { agentStore } from '$lib/stores/agent';
+	import { agentStore, agentStoreByName } from '$lib/stores/agent';
 
 	export let print = false;
 </script>
@@ -45,7 +45,7 @@
 				<td colspan={!print ? 9 : 12} class="text-center">입력된 보수 정보가 없습니다.</td>
 			</tr>
 		{:else}
-			{#each $agentStore as agent, index (agent.id)}
+			{#each !print ? $agentStore : $agentStoreByName as agent, index (agent.id)}
 				<tr class:bg-gray-50={index % 2 === 1}>
 					<th scope="row">{index + 1}</th>
 					<th scope="row">{agent.name}</th>

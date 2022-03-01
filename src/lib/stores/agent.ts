@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store';
+import { writable, derived } from 'svelte/store';
 
 export type AgentData = {
   id: number;
@@ -27,6 +27,23 @@ export const agentStore = (() => {
     remove: (id: number) => update((existing) => existing.filter((data) => data.id !== id)),
   };
 })();
+
+/*
+ * Passing asynchronous function to on:beforeprint and on:afterprint does not work reliably
+ * Therefore sorting agent store before and after print does not work (e.g. agentStore.sort())
+ */
+
+export const agentStoreByName = derived(
+  agentStore,
+  (($agentStore) => {
+    const data = [...$agentStore];
+    return data.sort(({ name: name1 }, { name: name2 }) => {
+      if (name1 < name2) return -1;
+      if (name1 > name2) return 1;
+      return 0;
+    });
+  }),
+);
 
 export const createAgentData = (formData: FormData): AgentData => ({
   id: Date.now(),
