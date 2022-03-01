@@ -6,7 +6,7 @@
 			</p>
 			<p class="text-gray-700">
 				오류 제보 및 제안은
-				<a href="https://github.com/hyunbinseo/social-agent/issues">깃허브 이슈</a>에 남겨주세요.
+				<a href="https://github.com/hyunbinseo/sbm-work-report/issues">깃허브 이슈</a>에 남겨주세요.
 			</p>
 		</div>
 	</div>

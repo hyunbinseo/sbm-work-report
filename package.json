@@ -1,6 +1,5 @@
 {
-  "name": "social-agent",
-  "version": "0.0.1",
+  "name": "sbm-work-report",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
