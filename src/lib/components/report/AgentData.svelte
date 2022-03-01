@@ -10,7 +10,7 @@
 		<col />
 		<col />
 		<col />
-		<colgroup span="2" />
+		<colgroup span={!print ? 2 : 6} />
 		<colgroup span="3" />
 		{#if !print}
 			<col />
