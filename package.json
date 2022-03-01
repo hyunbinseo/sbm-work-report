@@ -11,7 +11,7 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "1.0.0-next.22",
+    "@sveltejs/adapter-static": "1.0.0-next.28",
     "@sveltejs/kit": "1.0.0-next.265",
     "@tailwindcss/forms": "^0.4.0",
     "@types/uuid": "^8.3.4",
