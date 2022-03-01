@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { agentStore, agentStoreByName } from '$lib/stores/agent';
+	import { organizationStore } from '$lib/stores/organization';
 
 	export let print = false;
 </script>
 
-<div class="overflow-x-auto">
+<div class="break-after-page overflow-x-auto">
 	<table class="min-w-full whitespace-nowrap">
 		<!-- Reference https://www.w3.org/WAI/tutorials/tables/irregular/ -->
 		<col />
@@ -79,3 +80,51 @@
 		{/if}
 	</table>
 </div>
+
+{#if print}
+	{#each $agentStoreByName as agent (agent.id)}
+		<div class="break-after-page space-y-6">
+			<div>
+				<h1 class="text-3xl font-semibold">{agent.name} 사회복무요원</h1>
+				<h2 class="mt-2">
+					{$organizationStore.city}
+					{$organizationStore.district}
+					{$organizationStore.organization} ({$organizationStore.month})
+				</h2>
+			</div>
+			<table class="min-w-full whitespace-nowrap">
+				<col />
+				<colgroup span="6" />
+				<colgroup span="3" />
+				<tr class="bg-gray-100">
+					<th scope="col" rowspan="2">출장<br />횟수</th>
+					<th scope="colgroup" colspan="6">보수 지급</th>
+					<th scope="colgroup" colspan="3">보수 미지급</th>
+				</tr>
+				<tr class="bg-gray-100">
+					<th scope="col">연가</th>
+					<th scope="col">병가</th>
+					<th scope="col">공가</th>
+					<th scope="col">청원<br />휴가</th>
+					<th scope="col">특별<br />휴가</th>
+					<th scope="col">교육</th>
+					<th scope="col">결근</th>
+					<th scope="col">병가</th>
+					<th scope="col">이탈</th>
+				</tr>
+				<tr>
+					<td>{agent.businessTrip}회</td>
+					<td>{agent.paid.annualLeave}일</td>
+					<td>{agent.paid.sickLeave}일</td>
+					<td>{agent.paid.officialLeave}일</td>
+					<td>{agent.paid.emergencyLeave}일</td>
+					<td>{agent.paid.specialLeave}일</td>
+					<td>{agent.education}일</td>
+					<td>{agent.unpaid.exceedLeave}일</td>
+					<td>{agent.unpaid.sickLeave}일</td>
+					<td>{agent.unpaid.absence}일</td>
+				</tr>
+			</table>
+		</div>
+	{/each}
+{/if}
