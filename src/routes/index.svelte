@@ -52,12 +52,12 @@
 			<div>
 				<!-- Organization -->
 				<div>
-					<h2 class="text-lg font-medium text-gray-900">기관 정보</h2>
+					<h2 class="text-xl font-semibold text-gray-900 sm:text-2xl">기관 정보</h2>
 					<Organization />
 				</div>
 				<!-- Agent -->
 				<div class="mt-10 border-t border-gray-200 pt-10">
-					<h2 class="text-lg font-medium text-gray-900">보수 정보</h2>
+					<h2 class="text-xl font-semibold text-gray-900 sm:text-2xl">보수 정보</h2>
 					<Agent />
 				</div>
 			</div>
@@ -67,7 +67,7 @@
 				<div
 					class="mt-10 border-t border-gray-200 pt-10 sm:sticky sm:top-10 xl:mt-0 xl:border-none xl:pt-0"
 				>
-					<h2 class="text-lg font-medium text-gray-900">입력 정보</h2>
+					<h2 class="text-xl font-semibold text-gray-900 sm:text-2xl">입력 정보</h2>
 					<div
 						class="mt-4 space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white py-6 px-4 shadow-sm sm:px-6"
 					>
