@@ -21,16 +21,32 @@
 		<Input label="교육 일수" name="education" type="number" placeholder="복무기본교육 등" />
 	</div>
 
-	<Divider name="휴가" />
+	<Divider name="연가 및 반일 연가" />
 	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-3 sm:p-6">
 		<Input label="연가 일수" name="annual-leave" type="number" />
+		<Input
+			label="오전 반일 연가 횟수"
+			name="half-leave-am"
+			type="number"
+			placeholder="중식비 미지급"
+		/>
+		<Input
+			label="오후 반일 연가 횟수"
+			name="half-leave-pm"
+			type="number"
+			placeholder="중식비 지급"
+		/>
+	</div>
+
+	<Divider name="연가를 제외한 휴가" />
+	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-4 sm:p-6">
 		<Input label="병가 일수" name="sick-leave" type="number" />
 		<Input label="공가 일수" name="official-leave" type="number" />
 		<Input label="청원 휴가 일수" name="emergency-leave" type="number" />
 		<Input label="특별 휴가 일수" name="special-leave" type="number" />
 	</div>
 
-	<Divider name="보수 공제 대상" />
+	<Divider name="보수 미지급 대상" />
 	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-3 sm:p-6">
 		<Input
 			label="초과 결근 일수"

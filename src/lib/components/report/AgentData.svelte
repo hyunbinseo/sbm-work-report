@@ -11,7 +11,7 @@
 		<col />
 		<col />
 		<col />
-		<colgroup span={!print ? 2 : 6} />
+		<colgroup span={!print ? 2 : 8} />
 		<colgroup span="3" />
 		{#if !print}
 			<col />
@@ -20,7 +20,7 @@
 			<th scope="col" rowspan="2">번호</th>
 			<th scope="col" rowspan="2">요원</th>
 			<th scope="col" rowspan="2">출장<br />횟수</th>
-			<th scope="colgroup" colspan={!print ? 2 : 6}>보수 지급</th>
+			<th scope="colgroup" colspan={!print ? 2 : 8}>보수 지급</th>
 			<th scope="colgroup" colspan="3">보수 미지급</th>
 			{#if !print}
 				<th scope="col" rowspan="2">비고</th>
@@ -31,6 +31,8 @@
 				<th scope="col">휴가</th>
 			{:else}
 				<th scope="col">연가</th>
+				<th scope="col">오전<br />반가</th>
+				<th scope="col">오후<br />반가</th>
 				<th scope="col">병가</th>
 				<th scope="col">공가</th>
 				<th scope="col">청원<br />휴가</th>
@@ -43,7 +45,7 @@
 		</tr>
 		{#if !$agentStore.length}
 			<tr>
-				<td colspan={!print ? 9 : 12} class="text-center">입력된 보수 정보가 없습니다.</td>
+				<td colspan={!print ? 9 : 14} class="text-center">입력된 보수 정보가 없습니다.</td>
 			</tr>
 		{:else}
 			{#each !print ? $agentStore : $agentStoreByName as agent, index (agent.id)}
@@ -55,6 +57,8 @@
 						<td>{Object.values(agent.paid).reduce((a, b) => a + b)}일 </td>
 					{:else}
 						<td>{agent.paid.annualLeave}일</td>
+						<td>{agent.paid.halfLeaveAm}회</td>
+						<td>{agent.paid.halfLeavePm}회</td>
 						<td>{agent.paid.sickLeave}일</td>
 						<td>{agent.paid.officialLeave}일</td>
 						<td>{agent.paid.emergencyLeave}일</td>
@@ -94,15 +98,17 @@
 			</div>
 			<table class="min-w-full whitespace-nowrap">
 				<col />
-				<colgroup span="6" />
+				<colgroup span="8" />
 				<colgroup span="3" />
 				<tr class="bg-gray-100">
 					<th scope="col" rowspan="2">출장<br />횟수</th>
-					<th scope="colgroup" colspan="6">보수 지급</th>
+					<th scope="colgroup" colspan="8">보수 지급</th>
 					<th scope="colgroup" colspan="3">보수 미지급</th>
 				</tr>
 				<tr class="bg-gray-100">
 					<th scope="col">연가</th>
+					<th scope="col">오전<br />반가</th>
+					<th scope="col">오후<br />반가</th>
 					<th scope="col">병가</th>
 					<th scope="col">공가</th>
 					<th scope="col">청원<br />휴가</th>
@@ -115,6 +121,8 @@
 				<tr>
 					<td>{agent.businessTrip}회</td>
 					<td>{agent.paid.annualLeave}일</td>
+					<td>{agent.paid.halfLeaveAm}회</td>
+					<td>{agent.paid.halfLeavePm}회</td>
 					<td>{agent.paid.sickLeave}일</td>
 					<td>{agent.paid.officialLeave}일</td>
 					<td>{agent.paid.emergencyLeave}일</td>
