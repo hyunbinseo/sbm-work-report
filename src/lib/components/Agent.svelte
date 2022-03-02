@@ -13,7 +13,7 @@
 		target.reset();
 		target.querySelector('input').focus();
 	}}
-	class="mt-6 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm"
+	class="mt-4 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm"
 >
 	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-3 sm:p-6">
 		<Input label="이름" name="name" placeholder="홍길동" type="text" />
@@ -47,7 +47,7 @@
 	</div>
 
 	<Divider name="보수 미지급 대상" />
-	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-3 sm:p-6">
+	<div class="grid gap-y-6 gap-x-4 p-4 pb-6 sm:grid-cols-3 sm:p-6 sm:pb-8">
 		<Input
 			label="초과 결근 일수"
 			name="unpaid-exceed-leave"
@@ -64,11 +64,11 @@
 	</div>
 
 	<nav
-		class="flex items-center justify-between border-t border-gray-200 px-4 py-3 sm:px-6"
+		class="flex items-center justify-between border-t border-gray-200 p-4 sm:px-6 sm:py-5"
 		aria-label="보수 정보 조작"
 	>
 		<div class="hidden sm:block">
-			<p class="text-gray-700">전부 필수 항목입니다.</p>
+			<p class="text-gray-700">모든 항목을 입력해야 합니다.</p>
 		</div>
 		<div class="flex flex-1 justify-between sm:justify-end">
 			<button
