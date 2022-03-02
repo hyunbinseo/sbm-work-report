@@ -10,12 +10,25 @@
 	import Agent from '$lib/components/Agent.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Organization from '$lib/components/Organization.svelte';
+	import { generateCsv } from '$lib/data/csv';
 
 	let documentId: string;
 
 	const setDocumentId = () => (documentId = uuidv4());
 
 	setDocumentId();
+
+	const downloadCsv = async () => {
+		const csv = await generateCsv();
+		if (csv instanceof Error) return alert(csv.message);
+		const anchor = document.createElement('a');
+		anchor.href = `data:text/csv;charset=utf-8,%EF%BB%BF${csv}`;
+		anchor.target = '_blank';
+		anchor.download = `${VITE_TITLE}.csv`;
+		document.body.appendChild(anchor);
+		anchor.click();
+		document.body.removeChild(anchor);
+	};
 
 	let isSafariOnMac = false;
 
@@ -30,6 +43,7 @@
 
 <svelte:window
 	on:beforeprint={setDocumentId}
+	on:afterprint={downloadCsv}
 	on:beforeunload|preventDefault={(e) => (e.returnValue = '')}
 />
 
@@ -78,7 +92,7 @@
 							type="button"
 							class="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
 						>
-							인쇄하기
+							인쇄 및 저장하기
 						</button>
 						{#if isSafariOnMac}
 							<p class="text-xs text-gray-500">
