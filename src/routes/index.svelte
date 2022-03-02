@@ -2,7 +2,6 @@
 	const { VITE_TITLE } = import.meta.env;
 
 	import { onMount } from 'svelte';
-	import { v4 as uuidv4 } from 'uuid';
 
 	import AgentData from '$lib/components/report/AgentData.svelte';
 	import Approval from '$lib/components/report/Approval.svelte';
@@ -11,12 +10,6 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Organization from '$lib/components/Organization.svelte';
 	import { generateCsv } from '$lib/data/csv';
-
-	let documentId: string;
-
-	const setDocumentId = () => (documentId = uuidv4());
-
-	setDocumentId();
 
 	const downloadCsv = async () => {
 		const csv = await generateCsv();
@@ -42,14 +35,12 @@
 </script>
 
 <svelte:window
-	on:beforeprint={setDocumentId}
 	on:afterprint={downloadCsv}
 	on:beforeunload|preventDefault={(e) => (e.returnValue = '')}
 />
 
 <!-- @media print -->
 <div class="space-y-6 screen:hidden">
-	<code class="text-xs">{documentId}</code>
 	<Approval />
 	<OrganizationData />
 	<AgentData print={true} />
