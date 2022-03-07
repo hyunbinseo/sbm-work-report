@@ -21,6 +21,7 @@
 		document.body.appendChild(anchor);
 		anchor.click();
 		document.body.removeChild(anchor);
+		alert('파일이 다운로드 되었습니다.');
 	};
 
 	let isSafariOnMac = false;
@@ -83,7 +84,7 @@
 							type="button"
 							class="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
 						>
-							인쇄 및 저장하기
+							인쇄 및 파일 다운로드
 						</button>
 						{#if isSafariOnMac}
 							<p class="text-xs text-gray-500">
