@@ -14,6 +14,7 @@
 	td {
 		@apply p-2;
 		@apply text-gray-700;
+		@apply print:text-black;
 		@apply border;
 	}
 	th {
