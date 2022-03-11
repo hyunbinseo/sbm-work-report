@@ -90,7 +90,7 @@
 		<div class="break-after-page space-y-6">
 			<!-- Header -->
 			<div class="space-y-2">
-				<h1 class="text-3xl font-semibold">{agent.name} 사회복무요원</h1>
+				<h1 class="text-3xl font-bold">{agent.name} 사회복무요원</h1>
 				<h2>
 					{$organizationStore.city}
 					{$organizationStore.district}
@@ -143,7 +143,7 @@
 			<hr />
 			<!-- Standard -->
 			<div class="space-y-3">
-				<h2 class="text-xl font-medium">지급 기준</h2>
+				<h2 class="text-2xl font-medium tracking-tight">지급 기준</h2>
 				<p class="text-sm">
 					병무청 / 정보공개 / 정보게시판 / 국·실별 주요정보 / 사회복무국 - 에서도 확인 가능합니다.
 				</p>

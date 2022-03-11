@@ -18,7 +18,7 @@
 		@apply border;
 	}
 	th {
-		@apply font-medium;
+		@apply font-normal;
 	}
 	td {
 		@apply text-right;

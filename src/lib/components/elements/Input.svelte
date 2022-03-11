@@ -11,7 +11,7 @@
 </script>
 
 <div>
-	<label class="block font-medium text-gray-700">
+	<label class="block text-gray-700">
 		{label}
 		<input
 			{name}

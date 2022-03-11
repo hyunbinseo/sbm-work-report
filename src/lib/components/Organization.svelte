@@ -64,7 +64,7 @@
 		<Select name="organization" label="소속" options={organizations} />
 		<Select name="type" label="구분" options={[['지방자치단체'], ['사회복지시설']]} />
 		<div>
-			<label class="block font-medium text-gray-700">
+			<label class="block text-gray-700">
 				대상 연월
 				<input
 					bind:this={monthInput}
