@@ -5,6 +5,7 @@
 @layer base {
 	a {
 		@apply text-indigo-500;
+		@apply hover:text-indigo-600;
 	}
 	tr {
 		@apply break-inside-avoid;
