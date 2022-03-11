@@ -5,6 +5,7 @@
 @layer base {
 	a {
 		@apply text-indigo-500;
+		@apply hover:text-indigo-600;
 	}
 	tr {
 		@apply break-inside-avoid;
@@ -14,10 +15,12 @@
 	td {
 		@apply p-2;
 		@apply text-gray-700;
+		@apply print:text-black;
+		@apply print:text-sm;
 		@apply border;
 	}
 	th {
-		@apply font-medium;
+		@apply font-normal;
 	}
 	td {
 		@apply text-right;

@@ -8,6 +8,8 @@ export type AgentData = {
   paid: {
     annualLeave: number;
     emergencyLeave: number;
+    halfLeaveAm: number;
+    halfLeavePm: number;
     officialLeave: number;
     sickLeave: number;
     specialLeave: number;
@@ -53,6 +55,8 @@ export const createAgentData = (formData: FormData): AgentData => ({
   paid: {
     annualLeave: Number(formData.get('annual-leave')),
     emergencyLeave: Number(formData.get('emergency-leave')),
+    halfLeaveAm: Number(formData.get('half-leave-am')),
+    halfLeavePm: Number(formData.get('half-leave-pm')),
     officialLeave: Number(formData.get('official-leave')),
     sickLeave: Number(formData.get('sick-leave')),
     specialLeave: Number(formData.get('special-leave')),

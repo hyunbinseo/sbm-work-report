@@ -44,8 +44,12 @@
 	});
 </script>
 
-<form bind:this={organizationForm} on:change={setOrganizationStore}>
-	<div class="mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4">
+<form
+	bind:this={organizationForm}
+	on:change={setOrganizationStore}
+	class="mt-4 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm"
+>
+	<div class="grid grid-cols-1 gap-y-6 p-4 pb-6 sm:grid-cols-2 sm:gap-x-4 sm:p-6 sm:pb-8">
 		<Select name="city" label="도시" options={[['서울특별시']]} />
 		<Select name="district" label="구" options={[['강남구']]} />
 		<Select
@@ -60,7 +64,7 @@
 		<Select name="organization" label="소속" options={organizations} />
 		<Select name="type" label="구분" options={[['지방자치단체'], ['사회복지시설']]} />
 		<div>
-			<label class="block font-medium text-gray-700">
+			<label class="block text-gray-700">
 				대상 연월
 				<input
 					bind:this={monthInput}

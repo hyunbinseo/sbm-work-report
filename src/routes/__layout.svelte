@@ -1,7 +1,7 @@
 <script lang="ts">
 	const { VITE_TITLE, VITE_DESCRIPTION } = import.meta.env;
 
-	import '$lib/styles/pretendard.css';
+	import '$lib/styles/font.css';
 	import '$lib/styles/tailwind.css';
 </script>
 

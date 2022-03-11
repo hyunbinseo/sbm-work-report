@@ -21,3 +21,12 @@
 > 휴가는 영 제59조에 따른 연가ㆍ청원휴가ㆍ병가ㆍ공가 및 특별휴가로 구분한다.
 
 [사회복무요원 복무관리 규정](https://www.law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EC%82%AC%ED%9A%8C%EB%B3%B5%EB%AC%B4%EC%9A%94%EC%9B%90%EB%B3%B5%EB%AC%B4%EA%B4%80%EB%A6%AC%EA%B7%9C%EC%A0%95)(2021. 10. 7) 제20조
+
+> 연가는 오전 또는 오후의 반일단위로 허가할 수 있으며, 반일연가는 14:00시를 기준으로 오전ㆍ오후로 구분하며, 반일연가 2회는 연가 1일로 계산한다.
+
+[사회복무요원 복무관리 규정](https://www.law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EC%82%AC%ED%9A%8C%EB%B3%B5%EB%AC%B4%EC%9A%94%EC%9B%90%EB%B3%B5%EB%AC%B4%EA%B4%80%EB%A6%AC%EA%B7%9C%EC%A0%95)(2021. 10. 7) 제21조
+
+### 비고
+
+- [목록](oss-notice.md)의 오픈소스 라이브러리를 활용해 제작되었습니다.
+- 오류 제보 및 제안 사항 건의는 [깃허브 이슈](https://github.com/hyunbinseo/sbm-work-report/issues)에 남겨주세요.
