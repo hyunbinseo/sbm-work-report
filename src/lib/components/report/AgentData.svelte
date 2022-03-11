@@ -136,15 +136,15 @@
 						<td>{agent.unpaid.absence}일</td>
 					</tr>
 				</table>
-				<p class="text-sm"><sup>1</sup> 출장 횟수만큼 지급 기준에 따른 교통비가 지급됩니다.</p>
-				<p class="text-sm"><sup>2</sup> 오후 반가 사용일과 교육일에만 중식비가 지급됩니다.</p>
-				<p class="text-sm"><sup>3</sup> 교육일에 대한 중식비는 병무청에서 별도 지급됩니다.</p>
+				<p class="text-xs"><sup>1</sup> 출장 횟수만큼 지급 기준에 따른 교통비가 지급됩니다.</p>
+				<p class="text-xs"><sup>2</sup> 오후 반가 사용일과 교육일에만 중식비가 지급됩니다.</p>
+				<p class="text-xs"><sup>3</sup> 교육일에 대한 중식비는 병무청에서 별도 지급됩니다.</p>
 			</div>
 			<hr />
 			<!-- Standard -->
 			<div class="space-y-3">
 				<h2 class="text-xl font-bold tracking-tight">지급 기준</h2>
-				<p class="text-sm">
+				<p class="text-xs">
 					병무청 / 정보공개 / 정보게시판 / 국·실별 주요정보 / 사회복무국 - 에서도 확인 가능합니다.
 				</p>
 				<table>

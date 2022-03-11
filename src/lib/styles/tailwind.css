@@ -16,6 +16,7 @@
 		@apply p-2;
 		@apply text-gray-700;
 		@apply print:text-black;
+		@apply print:text-sm;
 		@apply border;
 	}
 	th {
