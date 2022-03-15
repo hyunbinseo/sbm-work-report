@@ -26,7 +26,7 @@
 
 [사회복무요원 복무관리 규정](https://www.law.go.kr/%ED%96%89%EC%A0%95%EA%B7%9C%EC%B9%99/%EC%82%AC%ED%9A%8C%EB%B3%B5%EB%AC%B4%EC%9A%94%EC%9B%90%EB%B3%B5%EB%AC%B4%EA%B4%80%EB%A6%AC%EA%B7%9C%EC%A0%95)(2021. 10. 7) 제21조
 
-### 비고
+## 비고
 
-- [목록](oss-notice.md)의 오픈소스 라이브러리를 활용해 제작되었습니다.
-- 오류 제보 및 제안 사항 건의는 [깃허브 이슈](https://github.com/hyunbinseo/sbm-work-report/issues)에 남겨주세요.
+- [오픈소스 소프트웨어](oss-notice.md)를 활용해 제작되었습니다.
+- 오류 및 개선 사항은 [Discussions](https://github.com/hyunbinseo/sbm-work-report/discussions/1)에 남겨주세요.
