@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+	html {
+		@apply scroll-smooth;
+	}
 	a {
 		@apply text-indigo-500;
 		@apply hover:text-indigo-600;
