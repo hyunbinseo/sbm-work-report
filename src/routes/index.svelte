@@ -65,7 +65,7 @@
 				</div>
 				<!-- Add Agent Data -->
 				<div id="add" class="mt-10 border-t border-gray-200 pt-10">
-					<h2 class="text-xl tracking-tight text-gray-900">보수 정보</h2>
+					<h2 class="text-xl tracking-tight text-gray-900">복무 정보</h2>
 					<a href="#data" class="text-sm xl:hidden">입력 정보 확인</a>
 					<Agent />
 				</div>
@@ -78,7 +78,7 @@
 					class="mt-10 border-t border-gray-200 pt-10 sm:sticky sm:top-10 xl:mt-0 xl:border-none xl:pt-0"
 				>
 					<h2 class="text-xl tracking-tight text-gray-900">입력 정보</h2>
-					<a href="#add" class="text-sm xl:hidden">보수 정보 입력</a>
+					<a href="#add" class="text-sm xl:hidden">복무 정보 추가</a>
 					<div
 						class="mt-4 space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white py-6 px-4 shadow-sm sm:px-6"
 					>

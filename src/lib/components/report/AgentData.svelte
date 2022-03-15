@@ -17,7 +17,7 @@
 			<col />
 		{/if}
 		<tr class="bg-gray-100">
-			<th scope="col" rowspan="2">번호</th>
+			<th scope="col" rowspan="2">연번</th>
 			<th scope="col" rowspan="2">요원</th>
 			<th scope="col" rowspan="2">출장<br />횟수</th>
 			<th scope="colgroup" colspan={!print ? 2 : 8}>보수 지급</th>
