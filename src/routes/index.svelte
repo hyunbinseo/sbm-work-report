@@ -50,11 +50,12 @@
 <!-- @media screen -->
 <div class="bg-gray-50 print:hidden">
 	<main class="mx-auto max-w-screen-2xl px-4 py-10 sm:py-16 sm:px-6 lg:px-12 xl:px-16">
-		<h1
-			class="pb-10 text-2xl font-bold leading-7 tracking-tight text-gray-900 sm:truncate sm:text-3xl"
-		>
-			{VITE_TITLE}
-		</h1>
+		<div class="pb-10">
+			<h1 class="pb-2 text-2xl font-bold leading-7 tracking-tight text-gray-900 sm:text-3xl">
+				{VITE_TITLE} 작성
+			</h1>
+			<p class="text-gray-500">결재 문서, 요원별 내역서, 엑셀 파일을 생성합니다.</p>
+		</div>
 		<div class="xl:grid xl:grid-cols-2 xl:gap-x-16">
 			<!-- Column -->
 			<div>
