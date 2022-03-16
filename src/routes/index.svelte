@@ -24,7 +24,8 @@
 		document.body.appendChild(anchor);
 		anchor.click();
 		document.body.removeChild(anchor);
-		alert('파일이 다운로드 되었습니다.');
+		// In macOS Safari, alert modal is shown before the download confirm modal
+		alert('입력된 데이터를 다운로드합니다.');
 	};
 
 	let isSafariOnMac = false;
@@ -105,8 +106,11 @@
 								</button>
 								{#if isSafariOnMac}
 									{#if !hasPrintedOnSafari}
+										<!-- In macOS Safari, before unload is not called when an anchor tag is clicked -->
 										<p class="pt-2 text-xs text-gray-500">
 											macOS Safari에서는 위 버튼이 <a
+												target="_blank"
+												rel="noopener"
 												href="https://github.com/crabbly/Print.js/issues/528">한 번만 작동</a
 											>합니다.
 										</p>
