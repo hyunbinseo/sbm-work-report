@@ -10,6 +10,7 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Organization from '$lib/components/Organization.svelte';
 	import { generateCsv } from '$lib/data/csv';
+	import { organizationStore } from '$lib/stores/organization';
 
 	const downloadCsv = async () => {
 		const csv = await generateCsv();
@@ -17,7 +18,7 @@
 		const anchor = document.createElement('a');
 		anchor.href = `data:text/csv;charset=utf-8,%EF%BB%BF${csv}`;
 		anchor.target = '_blank';
-		anchor.download = `${VITE_TITLE}.csv`;
+		anchor.download = `[${$organizationStore.month}] ${$organizationStore.district} ${$organizationStore.organization} - ${$organizationStore.type}.csv`;
 		document.body.appendChild(anchor);
 		anchor.click();
 		document.body.removeChild(anchor);
