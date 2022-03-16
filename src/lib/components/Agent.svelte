@@ -70,17 +70,17 @@
 		<div class="hidden sm:block">
 			<p class="text-gray-700">모든 항목을 입력해야 합니다.</p>
 		</div>
-		<div class="flex flex-1 justify-between sm:justify-end">
+		<div class="flex flex-1 flex-row-reverse justify-between sm:justify-start">
+			<button
+				class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+			>
+				추가
+			</button>
 			<button
 				type="reset"
 				class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
 			>
 				초기화
-			</button>
-			<button
-				class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
-			>
-				추가
 			</button>
 		</div>
 	</nav>
