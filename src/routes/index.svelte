@@ -89,7 +89,7 @@
 						<button
 							on:click={() => window.print()}
 							type="button"
-							class="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base text-white shadow-sm hover:bg-indigo-700"
+							class="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base text-white shadow-sm hover:bg-indigo-700 focus:bg-white focus:text-gray-700 focus:hover:bg-gray-50"
 						>
 							인쇄 및 파일 다운로드
 						</button>
