@@ -2,6 +2,7 @@
 	const { VITE_TITLE } = import.meta.env;
 
 	import { onMount } from 'svelte';
+	import { slide } from 'svelte/transition';
 
 	import AgentData from '$lib/components/report/AgentData.svelte';
 	import Approval from '$lib/components/report/Approval.svelte';
@@ -10,6 +11,7 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Organization from '$lib/components/Organization.svelte';
 	import { generateCsv } from '$lib/data/csv';
+	import { agentStore } from '$lib/stores/agent';
 	import { organizationStore } from '$lib/stores/organization';
 
 	const downloadCsv = async () => {
@@ -26,6 +28,7 @@
 	};
 
 	let isSafariOnMac = false;
+	let hasPrintedOnSafari = false;
 
 	onMount(() => {
 		if (
@@ -86,19 +89,34 @@
 					>
 						<OrganizationData />
 						<AgentData />
-						<button
-							on:click={() => window.print()}
-							type="button"
-							class="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base text-white shadow-sm hover:bg-indigo-700 focus:bg-white focus:text-gray-700 focus:hover:bg-gray-50"
-						>
-							인쇄 및 파일 다운로드
-						</button>
-						{#if isSafariOnMac}
-							<p class="text-xs text-gray-500">
-								macOS Safari에서는 위 버튼이 <a
-									href="https://github.com/crabbly/Print.js/issues/528">1회만 작동</a
-								>합니다. 이후에는 메뉴 막대 > 파일 > 프린트 메뉴를 이용합니다.
-							</p>
+						{#if $agentStore.length}
+							<div transition:slide>
+								<!-- In macOS Safari, transition is not played after print -->
+								<button
+									on:click={() => {
+										if (isSafariOnMac) hasPrintedOnSafari = true;
+										window.print();
+									}}
+									type="button"
+									class:hidden={hasPrintedOnSafari}
+									class="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base text-white shadow-sm hover:bg-indigo-700 focus:bg-white focus:text-gray-700 focus:hover:bg-gray-50"
+								>
+									문서 인쇄 및 파일 다운로드
+								</button>
+								{#if isSafariOnMac}
+									{#if !hasPrintedOnSafari}
+										<p class="pt-2 text-xs text-gray-500">
+											macOS Safari에서는 위 버튼이 <a
+												href="https://github.com/crabbly/Print.js/issues/528">한 번만 작동</a
+											>합니다.
+										</p>
+									{:else}
+										<p class="pt-2 text-xs text-gray-500">
+											<code>command + P</code> 단축키를 이용해 문서를 인쇄하고 파일을 다운로드합니다.
+										</p>
+									{/if}
+								{/if}
+							</div>
 						{/if}
 					</div>
 				</div>
