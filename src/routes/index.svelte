@@ -54,6 +54,13 @@
 
 <!-- @media screen -->
 <div class="bg-gray-50 print:hidden">
+	<p
+		class="flex h-10 items-center justify-center bg-gray-700 px-4 text-sm text-white sm:px-6 lg:px-8"
+	>
+		입력된 정보는 외부로 전송
+		<span class="sm:hidden">되지 않습니다.</span>
+		<span class="hidden sm:inline">되거나, 웹 브라우저에 저장되지 않습니다.</span>
+	</p>
 	<main class="mx-auto max-w-screen-2xl px-4 py-10 sm:py-16 sm:px-6 lg:px-12 xl:px-16">
 		<div class="pb-10">
 			<h1 class="pb-2 text-2xl font-bold leading-7 tracking-tight text-gray-900 sm:text-3xl">
