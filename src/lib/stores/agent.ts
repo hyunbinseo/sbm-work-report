@@ -18,6 +18,7 @@ export type AgentData = {
     absence: number;
     exceedLeave: number;
     sickLeave: number;
+    suspension: number;
   };
 };
 
@@ -65,5 +66,6 @@ export const createAgentData = (formData: FormData): AgentData => ({
     absence: Number(formData.get('unpaid-absence')),
     exceedLeave: Number(formData.get('unpaid-exceed-leave')),
     sickLeave: Number(formData.get('unpaid-sick-leave')),
+    suspension: Number(formData.get('unpaid-suspension')),
   },
 });
