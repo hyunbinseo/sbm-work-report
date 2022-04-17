@@ -47,7 +47,7 @@
 	</div>
 
 	<Divider name="보수 미지급 대상" />
-	<div class="grid gap-y-6 gap-x-4 p-4 pb-6 sm:grid-cols-3 sm:p-6 sm:pb-8">
+	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-4 sm:p-6">
 		<Input
 			label="초과 결근 일수"
 			name="unpaid-exceed-leave"
@@ -61,10 +61,11 @@
 			placeholder="통산 30일 기준"
 		/>
 		<Input label="복무 이탈 일수" name="unpaid-absence" type="number" />
+		<Input label="분할 복무 일수" name="unpaid-suspension" type="number" />
 	</div>
 
 	<nav
-		class="flex items-center justify-between border-t border-gray-200 p-4 sm:px-6 sm:py-5"
+		class="mt-2 flex items-center justify-between border-t border-gray-200 p-4 sm:px-6 sm:py-5"
 		aria-label="보수 정보 조작"
 	>
 		<div class="hidden sm:block">

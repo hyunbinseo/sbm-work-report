@@ -25,6 +25,7 @@ export type Data = {
   초과결근: number;
   초과병가: number;
   복무이탈: number;
+  분할복무: number;
 };
 
 export const generateData = (): Data[] => {
@@ -59,6 +60,7 @@ export const generateData = (): Data[] => {
       absence: 복무이탈,
       exceedLeave: 초과결근,
       sickLeave: 초과병가,
+      suspension: 분할복무,
     },
   }) => ({
     연월,
@@ -79,6 +81,7 @@ export const generateData = (): Data[] => {
     초과결근,
     초과병가,
     복무이탈,
+    분할복무,
   }));
 };
 
