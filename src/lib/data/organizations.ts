@@ -5,6 +5,7 @@ export type Type = typeof types[number];
 export type District = Readonly<{
   center: readonly string[];
   department: readonly string[];
+  facility: readonly string[];
 }>;
 
 export type Category = keyof District;
@@ -79,4 +80,5 @@ export const gangnam: District = {
     '치수과',
     '환경과',
   ],
+  facility: [],
 } as const;
