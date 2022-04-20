@@ -7,8 +7,8 @@
 		@apply scroll-smooth;
 	}
 	a {
-		@apply text-indigo-500;
-		@apply hover:text-indigo-600;
+		@apply text-indigo-600;
+		@apply hover:text-indigo-700;
 	}
 	tr {
 		@apply break-inside-avoid;
