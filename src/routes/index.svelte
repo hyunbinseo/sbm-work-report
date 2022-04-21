@@ -15,17 +15,17 @@
 	import { organizationStore } from '$lib/stores/organization';
 
 	const downloadCsv = async () => {
-		const csv = await generateCsv();
-		if (csv instanceof Error) return alert(csv.message);
-		const anchor = document.createElement('a');
-		anchor.href = `data:text/csv;charset=utf-8,%EF%BB%BF${csv}`;
-		anchor.target = '_blank';
-		anchor.download = `[${$organizationStore.month}] ${$organizationStore.district} ${$organizationStore.organization} - ${$organizationStore.type}.csv`;
-		document.body.appendChild(anchor);
-		anchor.click();
-		document.body.removeChild(anchor);
-		// In macOS Safari, alert modal is shown before the download confirm modal
-		alert('입력된 데이터를 다운로드합니다.');
+		if (window.confirm('제출용 엑셀 파일을 다운로드합니다.')) {
+			const csv = await generateCsv();
+			if (csv instanceof Error) return alert(csv.message);
+			const anchor = document.createElement('a');
+			anchor.href = `data:text/csv;charset=utf-8,%EF%BB%BF${csv}`;
+			anchor.target = '_blank';
+			anchor.download = `[${$organizationStore.month}] ${$organizationStore.district} ${$organizationStore.organization} - ${$organizationStore.type}.csv`;
+			document.body.appendChild(anchor);
+			anchor.click();
+			document.body.removeChild(anchor);
+		}
 	};
 
 	let isSafariOnMac = false;
