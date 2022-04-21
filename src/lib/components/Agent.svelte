@@ -39,7 +39,7 @@
 	</div>
 
 	<Divider name="연가를 제외한 휴가" />
-	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-4 sm:p-6">
+	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-2 sm:p-6 2xl:grid-cols-4">
 		<Input label="병가 일수" name="sick-leave" type="number" />
 		<Input label="공가 일수" name="official-leave" type="number" />
 		<Input label="청원 휴가 일수" name="emergency-leave" type="number" />
@@ -47,7 +47,7 @@
 	</div>
 
 	<Divider name="보수 미지급 대상" />
-	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-4 sm:p-6">
+	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-2 sm:p-6 2xl:grid-cols-4">
 		<Input
 			label="초과 결근 일수"
 			name="unpaid-exceed-leave"
