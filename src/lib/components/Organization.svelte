@@ -48,6 +48,7 @@
 
 <form
 	bind:this={organizationForm}
+	on:submit|preventDefault
 	on:change={setOrganizationStore}
 	class="mt-4 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm"
 >
