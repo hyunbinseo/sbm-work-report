@@ -65,7 +65,13 @@
 			]}
 		/>
 		{#if category === 'facility'}
-			<Input name="organization" label="소속" type="text" placeholder="기관명을 입력해주세요" />
+			<Input
+				name="organization"
+				label="소속"
+				type="text"
+				placeholder="기관명을 입력해주세요"
+				alignRight={false}
+			/>
 		{:else}
 			<Select name="organization" label="소속" options={organizations} />
 		{/if}
