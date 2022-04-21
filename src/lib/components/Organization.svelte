@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
 
+	import Input from '$lib/components/elements/Input.svelte';
 	import Select from '$lib/components/elements/Select.svelte';
 	import { gangnam } from '$lib/data/organizations';
 	import { organizationStore, createOrganizationData } from '$lib/stores/organization';
@@ -34,6 +35,7 @@
 
 	const setOrganizationStore = async () => {
 		await tick();
+		organizationForm.reportValidity();
 		const formData = new FormData(organizationForm);
 		organizationStore.set(createOrganizationData(formData));
 	};
@@ -46,6 +48,7 @@
 
 <form
 	bind:this={organizationForm}
+	on:submit|preventDefault
 	on:change={setOrganizationStore}
 	class="mt-4 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm"
 >
@@ -58,11 +61,26 @@
 			label="분류"
 			options={[
 				['구청/보건소', 'department'],
-				['동주민센터', 'center']
+				['동주민센터', 'center'],
+				['사회복지시설', 'facility']
 			]}
 		/>
-		<Select name="organization" label="소속" options={organizations} />
-		<Select name="type" label="구분" options={[['지방자치단체'], ['사회복지시설']]} />
+		{#if category === 'facility'}
+			<Input
+				name="organization"
+				label="소속"
+				type="text"
+				placeholder="기관명을 입력해주세요"
+				alignRight={false}
+			/>
+		{:else}
+			<Select name="organization" label="소속" options={organizations} />
+		{/if}
+		<Select
+			name="type"
+			label="구분"
+			options={category === 'facility' ? [['사회복지시설']] : [['지방자치단체'], ['사회복지시설']]}
+		/>
 		<div>
 			<label class="block text-gray-700">
 				대상 연월

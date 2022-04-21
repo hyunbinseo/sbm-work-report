@@ -17,7 +17,7 @@
 			<tr>
 				<td class="text-center">{$organizationStore.city}</td>
 				<td class="text-center">{$organizationStore.district}</td>
-				<td class="text-center">{$organizationStore.organization}</td>
+				<td class="text-center">{$organizationStore.organization || '-'}</td>
 				<td class="text-center">{$organizationStore.type}</td>
 				<td class="text-center">{$organizationStore.month}</td>
 			</tr>
