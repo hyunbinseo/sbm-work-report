@@ -1,7 +1,7 @@
 # OSS Notice
 
-- [@sveltejs/adapter-static@1.0.0-next.29](https://github.com/sveltejs/kit) - MIT
-- [@sveltejs/kit@1.0.0-next.316](https://github.com/sveltejs/kit) - MIT
+- [@sveltejs/adapter-static@1.0.0-next.37](https://github.com/sveltejs/kit) - MIT
+- [@sveltejs/kit@1.0.0-next.377](https://github.com/sveltejs/kit) - MIT
 - [@tailwindcss/forms@0.4.1](https://github.com/tailwindlabs/tailwindcss-forms) - MIT
 - [@typescript-eslint/eslint-plugin@5.20.0](https://github.com/typescript-eslint/typescript-eslint) - MIT
 - [@typescript-eslint/parser@5.20.0](https://github.com/typescript-eslint/typescript-eslint) - BSD-2-Clause
@@ -10,7 +10,7 @@
 - [eslint-plugin-svelte3@3.4.1](https://github.com/sveltejs/eslint-plugin-svelte3) - MIT
 - [eslint@7.32.0](https://github.com/eslint/eslint) - MIT
 - [json-2-csv@3.17.1](https://github.com/mrodrig/json-2-csv) - MIT
-- [postcss@8.4.12](https://github.com/postcss/postcss) - MIT
+- [postcss@8.4.14](https://github.com/postcss/postcss) - MIT
 - [prettier-plugin-tailwindcss@0.1.9](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) - MIT\*
 - [prettier@2.6.2](https://github.com/prettier/prettier) - MIT
 - [svelte-check@2.7.0](https://github.com/sveltejs/language-tools) - MIT
@@ -19,3 +19,4 @@
 - [tailwindcss@3.0.24](https://github.com/tailwindlabs/tailwindcss) - MIT
 - [tslib@2.3.1](https://github.com/Microsoft/tslib) - 0BSD
 - [typescript@4.6.3](https://github.com/Microsoft/TypeScript) - Apache-2.0
+- [vite@3.0.0](https://github.com/vitejs/vite) - MIT
