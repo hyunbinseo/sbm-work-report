@@ -1,18 +1,17 @@
 <script lang="ts">
 	const { VITE_TITLE } = import.meta.env;
 
-	import { onMount } from 'svelte';
-	import { slide } from 'svelte/transition';
-
-	import AgentData from '$lib/components/report/AgentData.svelte';
-	import Approval from '$lib/components/report/Approval.svelte';
-	import OrganizationData from '$lib/components/report/OrganizationData.svelte';
 	import Agent from '$lib/components/Agent.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Organization from '$lib/components/Organization.svelte';
+	import AgentData from '$lib/components/report/AgentData.svelte';
+	import Approval from '$lib/components/report/Approval.svelte';
+	import OrganizationData from '$lib/components/report/OrganizationData.svelte';
 	import { generateCsv } from '$lib/data/csv';
 	import { agentStore } from '$lib/stores/agent';
 	import { organizationStore } from '$lib/stores/organization';
+	import { onMount } from 'svelte';
+	import { slide } from 'svelte/transition';
 
 	const downloadCsv = async () => {
 		if (window.confirm('제출용 엑셀 파일을 다운로드합니다.')) {

@@ -1,4 +1,4 @@
-import { json2csvAsync } from 'json-2-csv';
+import { json2csv } from 'json-2-csv';
 
 import { agentStoreByName } from '../stores/agent';
 import { organizationStore } from '../stores/organization';
@@ -90,7 +90,7 @@ export const generateCsv = async (): Promise<string | Error> => {
   const commonMessage = '파일 작성에 실패했습니다.';
   if (data.length === 0) return new Error(`${commonMessage} (보수 정보 미입력)`);
   try {
-    return await json2csvAsync(data);
+		return await json2csv(data);
   } catch {
     return new Error(`${commonMessage} (CSV 변환 오류)`);
   }
