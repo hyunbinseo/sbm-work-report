@@ -10,9 +10,9 @@
 		@apply text-indigo-600;
 		@apply hover:text-indigo-700;
 	}
-  input {
-    @apply placeholder:text-gray-400;
-  }
+	input {
+		@apply placeholder:text-gray-400;
+	}
 	tr {
 		@apply break-inside-avoid;
 		@apply break-after-auto;

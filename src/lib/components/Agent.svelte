@@ -15,7 +15,7 @@
 	}}
 	class="mt-4 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm"
 >
-	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-3 sm:p-6">
+	<div class="grid gap-x-4 gap-y-6 p-4 sm:grid-cols-3 sm:p-6">
 		<Input label="이름" name="name" placeholder="홍길동" type="text" alignRight={false} />
 		<Input
 			label="출장 횟수"
@@ -28,7 +28,7 @@
 	</div>
 
 	<Divider name="연가 및 반일 연가" />
-	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-3 sm:p-6">
+	<div class="grid gap-x-4 gap-y-6 p-4 sm:grid-cols-3 sm:p-6">
 		<Input
 			label="오전 반일 연가 횟수"
 			unit="회"
@@ -47,7 +47,7 @@
 	</div>
 
 	<Divider name="연가를 제외한 휴가" />
-	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-2 sm:p-6">
+	<div class="grid gap-x-4 gap-y-6 p-4 sm:grid-cols-2 sm:p-6">
 		<Input label="병가 일수" unit="일" name="sick-leave" type="number" />
 		<Input label="공가 일수" unit="일" name="official-leave" type="number" />
 		<Input label="청원 휴가 일수" unit="일" name="emergency-leave" type="number" />
@@ -55,7 +55,7 @@
 	</div>
 
 	<Divider name="보수 미지급 대상" />
-	<div class="grid gap-y-6 gap-x-4 p-4 sm:grid-cols-2 sm:p-6">
+	<div class="grid gap-x-4 gap-y-6 p-4 sm:grid-cols-2 sm:p-6">
 		<Input
 			label="초과 결근 일수"
 			unit="일"
