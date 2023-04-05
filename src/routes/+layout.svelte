@@ -1,8 +1,7 @@
 <script lang="ts">
 	const { VITE_TITLE, VITE_DESCRIPTION } = import.meta.env;
 
-	import '$lib/styles/font.css';
-	import '$lib/styles/tailwind.css';
+	import './app.css';
 </script>
 
 <svelte:head>

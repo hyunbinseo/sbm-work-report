@@ -153,7 +153,7 @@
 					<tr class="bg-gray-100">
 						<th>비목</th>
 						<th>산정 기준</th>
-						<th>금액 ('22년)</th>
+						<th>금액 (2023년)</th>
 					</tr>
 					<tr>
 						<td>교통비</td>
@@ -175,27 +175,27 @@
 					<tr class="bg-gray-100">
 						<th>계급</th>
 						<th>복무 기간</th>
-						<th>봉급 ('22년)</th>
+						<th>봉급 (2023년)</th>
 					</tr>
 					<tr>
 						<td>이등병</td>
 						<td>소집월~2개월</td>
-						<td>510,100원</td>
+						<td>600,000원</td>
 					</tr>
 					<tr class="bg-gray-50">
 						<td>일등병</td>
 						<td>3개월~8개월</td>
-						<td>552,100원</td>
+						<td>680,000원</td>
 					</tr>
 					<tr>
 						<td>상등병</td>
 						<td>9개월~14개월</td>
-						<td>610,200원</td>
+						<td>800,000원</td>
 					</tr>
 					<tr class="bg-gray-50">
 						<td>병장</td>
 						<td>15개월이상</td>
-						<td>676,100원</td>
+						<td>1,000,000원</td>
 					</tr>
 				</table>
 			</div>

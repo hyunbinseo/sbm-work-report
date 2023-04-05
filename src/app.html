@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko" class="select-none">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Icons by svgrepo.com -->
+		<link rel="icon" type="image/svg+xml" href="%sveltekit.assets%/favicon.svg" />
+		<link rel="icon" type="image/png" href="%sveltekit.assets%/favicon.png" />
+		<!-- Illustration by undraw.co -->
+		<meta property="og:image" content="%sveltekit.assets%/opengraph.jpg" />
+		%sveltekit.head%
+	</head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Icons by svgrepo.com -->
-  <link rel="icon" type="image/svg+xml" href="%sveltekit.assets%/favicon.svg" />
-  <link rel="icon" type="image/png" href="%sveltekit.assets%/favicon.png" />
-  <!-- Illustration by undraw.co -->
-  <meta property="og:image" content="%sveltekit.assets%/opengraph.jpg" />
-  %sveltekit.head%
-</head>
-
-<body>
-  <script>
-    if (/MSIE|Trident/.test(window.navigator.userAgent)) location.href = '%sveltekit.assets%/unsupported';
-  </script>
-  <div>%sveltekit.body%</div>
-</body>
-
+	<body>
+		<script>
+			if (/MSIE|Trident/.test(window.navigator.userAgent))
+				location.href = '%sveltekit.assets%/unsupported';
+		</script>
+		<div>%sveltekit.body%</div>
+	</body>
 </html>

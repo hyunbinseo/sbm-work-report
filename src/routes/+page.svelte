@@ -1,18 +1,17 @@
 <script lang="ts">
 	const { VITE_TITLE } = import.meta.env;
 
-	import { onMount } from 'svelte';
-	import { slide } from 'svelte/transition';
-
-	import AgentData from '$lib/components/report/AgentData.svelte';
-	import Approval from '$lib/components/report/Approval.svelte';
-	import OrganizationData from '$lib/components/report/OrganizationData.svelte';
 	import Agent from '$lib/components/Agent.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Organization from '$lib/components/Organization.svelte';
+	import AgentData from '$lib/components/report/AgentData.svelte';
+	import Approval from '$lib/components/report/Approval.svelte';
+	import OrganizationData from '$lib/components/report/OrganizationData.svelte';
 	import { generateCsv } from '$lib/data/csv';
 	import { agentStore } from '$lib/stores/agent';
 	import { organizationStore } from '$lib/stores/organization';
+	import { onMount } from 'svelte';
+	import { slide } from 'svelte/transition';
 
 	const downloadCsv = async () => {
 		if (window.confirm('제출용 엑셀 파일을 다운로드합니다.')) {
@@ -61,7 +60,7 @@
 		<span class="sm:hidden">되지 않습니다.</span>
 		<span class="hidden sm:inline">되거나, 웹 브라우저에 저장되지 않습니다.</span>
 	</p>
-	<main class="mx-auto max-w-screen-2xl px-4 py-10 sm:py-16 sm:px-6 lg:px-12 xl:px-16">
+	<main class="mx-auto max-w-screen-2xl px-4 py-10 sm:px-6 sm:py-16 lg:px-12 xl:px-16">
 		<div class="pb-10">
 			<h1 class="pb-2 text-2xl font-bold leading-7 tracking-tight text-gray-900 sm:text-3xl">
 				{VITE_TITLE}
@@ -93,7 +92,7 @@
 					<h2 class="text-xl tracking-tight text-gray-900">입력 정보</h2>
 					<a href="#add" class="text-sm xl:hidden">복무 정보 추가</a>
 					<div
-						class="mt-4 space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white py-6 px-4 shadow-sm sm:px-6"
+						class="mt-4 space-y-6 overflow-hidden rounded-lg border border-gray-200 bg-white px-4 py-6 shadow-sm sm:px-6"
 					>
 						<OrganizationData />
 						<AgentData />
@@ -107,7 +106,7 @@
 									}}
 									type="button"
 									class:hidden={hasPrintedOnSafari}
-									class="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base text-white shadow-sm hover:bg-indigo-700 focus:bg-white focus:text-gray-700 focus:hover:bg-gray-50"
+									class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-3 text-base text-white shadow-sm hover:bg-indigo-700 focus:bg-white focus:text-gray-700 focus:hover:bg-gray-50"
 								>
 									문서 인쇄 및 파일 다운로드
 								</button>
